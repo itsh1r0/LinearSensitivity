@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "linearsensitivity",
+  "version": "${version}",
+  "name": "LinearSensitivity",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "hiro.sens.client.Command"
+    ]
+  },
+  "mixins": [
+    "linearsensitivity.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
