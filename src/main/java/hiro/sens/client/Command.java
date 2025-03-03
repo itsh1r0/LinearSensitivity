@@ -1,6 +1,6 @@
 package hiro.sens.client;
 
-import com.mojang.brigadier.arguments.DoubleArgumentType;
+import com.mojang.brigadier.arguments.FloatArgumentType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -20,9 +20,9 @@ public class Command implements ClientModInitializer {
     private void registerCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(ClientCommandManager.literal("sens")
-                    .then(ClientCommandManager.argument("value", DoubleArgumentType.doubleArg())
+                    .then(ClientCommandManager.argument("value", FloatArgumentType.floatArg())
                             .executes(context -> {
-                                double input = DoubleArgumentType.getDouble(context, "value");
+                                double input = FloatArgumentType.getFloat(context, "value");
                                 double sensitivity = (input > 1) ? 1 : (input < 0) ? 0 : input;
                                 MinecraftClient.getInstance().options.getMouseSensitivity().setValue(sensitivity);
                                 MinecraftClient.getInstance().options.write();
