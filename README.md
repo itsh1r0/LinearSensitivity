@@ -1,5 +1,7 @@
 # LinearSensitivity
 
+### _I'll stop create release on github. Go to [Modrinth](https://modrinth.com/mod/linear-sensitivity) to download newest version._
+
 ## **_Have you ever_**
 
 - Wonder "Why is 200% sensitivity not twice as fast as 100%" **?**
